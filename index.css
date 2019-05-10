@@ -1,0 +1,23 @@
+body {
+  font-family: Firicico;
+}
+
+.container {
+  margin: 5% 33%;
+  border: 4px solid yellowgreen;
+  border-radius: 10% 10% 10% 10%;
+  font-size: 1.5rem;
+}
+
+.container h2 {
+  text-align: center;
+}
+
+.container .todo, label, input#input, input[value="✎"] {
+  margin-left: 5%
+}
+
+input {
+  background-color: transparent;
+  font-size: 1.5rem;
+}
