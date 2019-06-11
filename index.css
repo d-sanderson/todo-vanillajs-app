@@ -12,21 +12,27 @@ body {
   width: auto;
 }
 
-.logo {
-  margin-top: 20px;
-}
 
-.container h2, .logo {
+h2.title {
   text-align: center;
-  font-family: flottflott;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .container .todo, label, input#input, input.edit {
   margin-left: 5%
 }
 
+h2.todo {
+  padding: 5% 0 0 5%;
+
+}
+
+div.list {
+  margin: 0 5% 0 5%;
+}
+
 input#input {
-  margin: auto;
+  padding-top: -30%;
   text-align:center;
   display: block;
   margin: 0 0 1em 10%;

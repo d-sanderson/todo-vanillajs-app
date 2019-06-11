@@ -76,8 +76,14 @@ $(document).on('click', '.delete', deleteTodo)
 
 $(document).on('click', '.edit', editTodo)
 
+$(document).on('click', '.content', function(e) {
+  if($(e.target).is('div')) {
+    e.target.innerHTML = `<del> ${e.target.innerText} </del>`
+  }
+})
+
 $(document).on('keypress', '.editing', function(e) {
-  var key = e.which || e.keyCode;
+  let key = e.which || e.keyCode;
     if (key === 13) { // 13 is enter
       let updatedTodo = e.target.value
       let index = e.target.parentNode.id
@@ -90,5 +96,14 @@ $(document).on('keypress', '.editing', function(e) {
       content.textContent = updatedTodo;
       $(".todo-" + index).prepend(content);
 
+    }
+})
+
+$(document).on('keypress', '#input', function(e) {
+  let key = e.which || e.keyCode;
+    if (key === 13) { // 13 is enter
+      addTodo();
+      removeTodos(e);
+      displayTodos();
     }
 })
