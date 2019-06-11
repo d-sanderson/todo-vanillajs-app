@@ -1,23 +1,52 @@
 body {
-  font-family: Firicico;
+  font-family: Fira Code;
+  background-color: rgb(4, 0, 51);
+  color: white;
 }
 
 .container {
   margin: 5% 33%;
-  border: 4px solid yellowgreen;
+  border: 4px solid purple;
   border-radius: 10% 10% 10% 10%;
   font-size: 1.5rem;
+  width: auto;
 }
 
-.container h2 {
+.logo {
+  margin-top: 20px;
+}
+
+.container h2, .logo {
   text-align: center;
+  font-family: flottflott;
 }
 
-.container .todo, label, input#input, input[value="✎"] {
+.container .todo, label, input#input, input.edit {
   margin-left: 5%
 }
 
+input#input {
+  margin: auto;
+  text-align:center;
+  display: block;
+  margin: 0 0 1em 10%;
+  width: 80%;
+  border: 1px solid #818181;
+
+}
+input#add {
+  text-align: center;
+  margin: auto;
+  display: block;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  background-color: rgb(99, 0, 231);
+  color: white;
+  font-size: 20px;
+}
 input {
-  background-color: transparent;
+  background-color: white;
   font-size: 1.5rem;
+  border-radius: 5% 5% 5% 5%;
+  color: black;
 }
