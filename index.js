@@ -18,8 +18,9 @@ function removeTodos() {
 }
 function displayTodos() {
   for(i = 0; i < todos.length; i++) {
+
     let todo = document.createElement('div');
-    todo.className = 'todo'
+    todo.className = `todo-${i}`
     todo.id = i;
 
     let content = document.createElement('div');
@@ -42,7 +43,6 @@ function displayTodos() {
 
 // 4 .it should have a way to edit a todos
 function editTodo(e) {
-
   let todoItem = e.target.parentNode;
   let todotext = e.target.parentNode.firstChild.innerText
   //remove the content div and replace it with the edit input
@@ -79,6 +79,16 @@ $(document).on('click', '.edit', editTodo)
 $(document).on('keypress', '.editing', function(e) {
   var key = e.which || e.keyCode;
     if (key === 13) { // 13 is enter
+      let updatedTodo = e.target.value
+      let index = e.target.parentNode.id
+      todos.splice(index, 1, updatedTodo)
+      console.log(todos)
+
+      e.target.parentNode.firstChild.remove();
+      let content = document.createElement('div')
+      content.className = 'content'
+      content.textContent = updatedTodo;
+      $(".todo-" + index).prepend(content);
 
     }
 })
